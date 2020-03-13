@@ -1,0 +1,382 @@
+<!Doctype html>
+<html>
+<head>
+
+<style>
+.mega-tooltip
+{
+  /*width:600px;*/
+  height:300px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  white-space: nowrap;
+}
+p {
+  margin:10px;
+  padding: 10px;
+  padding-left:25px;
+  text-align:left;
+}
+.flex-container > div {
+	margin-bottom: 15px;
+	width: 500px;
+ 	display: inline-block;
+    vertical-align: top;
+}
+
+.selecting-center td.right,
+    .selecting-center td.right *,
+    .selecting-center th.right,
+    .selecting-center th.right *,
+    .selecting-center td.left,
+    .selecting-center td.left *,
+    .selecting-center th.left,
+    .selecting-center th.left *,
+    .selecting-left td.right,
+    .selecting-left td.right *,
+    .selecting-left th.right,
+    .selecting-left th.right *,
+    .selecting-left td.center,
+    .selecting-left td.center *,
+    .selecting-left th.center,
+    .selecting-left th.center *,
+    .selecting-right td.center,
+    .selecting-right td.center *,
+    .selecting-right th.center,
+    .selecting-right th.center *,
+    .selecting-right td.left,
+    .selecting-right td.left *,
+    .selecting-right th.left,
+    .selecting-right th.left * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+    .selecting-center td.right::selection,
+    .selecting-center td.right *::selection,
+    .selecting-center th.right::selection,
+    .selecting-center th.right *::selection,
+    .selecting-center td.left::selection,
+    .selecting-center td.left *::selection,
+    .selecting-center th.left::selection,
+    .selecting-center th.left *::selection,
+    .selecting-left td.right::selection,
+    .selecting-left td.right *::selection,
+    .selecting-left th.right::selection,
+    .selecting-left th.right *::selection,
+    .selecting-left td.center::selection,
+    .selecting-left td.center *::selection,
+    .selecting-left th.center::selection,
+    .selecting-left th.center *::selection,
+    .selecting-right td.center::selection,
+    .selecting-right td.center *::selection,
+    .selecting-right th.center::selection,
+    .selecting-right th.center *::selection,
+    .selecting-right td.left::selection,
+    .selecting-right td.left *::selection,
+    .selecting-right th.left::selection,
+    .selecting-right th.left *::selection {
+    background: transparent;
+    }
+
+  table {
+    text-align: left;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-right:1px solid grey;
+    margin-bottom: 10px;
+    table-layout: fixed;
+  }
+
+  h3{ 
+    margin-bottom:4px;
+    padding: 10px;
+    padding-left:20px;
+    background-color:lightgrey;
+  }
+
+  th {
+    padding-left:20px;
+    background-color:lightgrey;
+  }
+
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: white;
+  }
+  .copy {
+    border-radius: 50%;
+    border:none;
+    background-color:blue;
+    background-image: url('../images/copy-button.png');
+    background-repeat:no-repeat;
+    width:18px;
+    height:18px;
+    padding: 0px;
+  }
+</style>
+
+</head>
+
+<body>
+
+<div class="mega-tooltip">
+    <div class="flex-container" id="selecty">
+        <div>
+            <table id="hello">
+            <h3>Hello World</h3>
+            <thead>
+
+                <th>Order Data
+                    <button class="copy"></button>
+                </th>
+                <th>PO Data
+                    <button class="copy"></button>
+                </th>
+                <th>Quote Data
+                    <button class="copy"></button>
+                </th>
+            </thead>
+            <tbody>
+            	<tr>
+                  <td class="left">mmmm</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">ddd</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">ggg</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">fff</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">ggg</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+             <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+              <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+              <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+                         </tbody>
+              
+            </table>
+        </div>
+        <div>
+            <table id="hello2">
+            <h3>Hello World</h3>
+            <thead>
+
+                <th>Order Data
+                    <button class="copy"></button>
+                </th>
+                <th>PO Data
+                    <button class="copy"></button>
+                </th>
+                <th>Quote Data
+                    <button class="copy"></button>
+                </th>
+            </thead>
+            <tbody>
+            	<tr>
+                  <td class="left">3108822342343422234234</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+             <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+              <tr>
+                  <td class="left"></td>
+                  <td class="center">2342345342</td>
+                  <td class="right"></td>
+              </tr>
+              <tr>
+                  <td class="left"></td>
+                  <td class="center">fgfgfgfggg</td>
+                  <td class="right"></td>
+              </tr>
+                         </tbody>
+              
+            </table>
+        </div>
+        <div>
+            <table id="hello3">
+            <h3>Hello World</h3>
+            <thead>
+              <tr>
+                <th>Order Data
+                    <button class="copy"></button>
+                </th>
+                <th>PO Data
+                    <button class="copy"></button>
+                </th>
+                <th>Quote Data
+                    <button class="copy"></button>
+                </th>
+              </tr>
+            </thead>
+            	<tr>
+                  <td class="left">dsd</td>
+                  <td class="center">fdd</td>
+                  <td class="right">bcvd</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">dfdfdf</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">dfdf</td>
+                  <td class="right">3453453455</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">2342345342</td>
+                  <td class="right">dffdfdfdf</td>
+              </tr>
+              <tr>
+                  <td class="left">1231088239</td>
+                  <td class="center">dfdfd</td>
+                  <td class="right">3453453455</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	
+	<script>
+	
+	
+	$('#selecty').mousedown(function(e) {
+            var t = document.getElementById('selecty');
+            if (e.target.classList.contains('right')) {
+                t.classList.remove('selecting-left');
+                t.classList.remove('selecting-center');
+                t.classList.add('selecting-right');
+            } else if (e.target.classList.contains('left')) {
+                t.classList.remove('selecting-right');
+                t.classList.remove('selecting-center');
+                t.classList.add('selecting-left');
+            } else if (e.target.classList.contains('center')) {
+                t.classList.remove('selecting-right');
+                t.classList.remove('selecting-left');
+                t.classList.add('selecting-center');
+            }
+        });
+	
+	
+	
+	function SelectColumn(index, tableId) {
+    var columnText ="";
+    var columnSelector = '#' + tableId + ' tbody > tr > td:nth-child(' + (index + 1) + ')';
+    var cells = $(columnSelector);
+
+    // clear existing selections
+    if (window.getSelection) { // all browsers, except IE before version 9
+        window.getSelection().removeAllRanges();
+    }
+
+
+    if (document.createRange) {
+        cells.each(function(i, cell) {
+            var rangeObj = document.createRange();
+            rangeObj.selectNodeContents(cell);
+            window.getSelection().addRange(rangeObj);
+            columnText = columnText + '\n' + rangeObj.toString();
+        });
+
+
+    }
+    else { // Internet Explorer before version 9
+        cells.each(function(i, cell) {
+            var rangeObj = document.body.createTextRange();
+            rangeObj.moveToElementText(cell);
+            rangeObj.select();
+            columnText = columnText + '\n';
+        });
+    }
+			  const el = document.createElement('textarea');
+			  el.value = columnText.trim();
+			  document.body.appendChild(el);
+			  el.select();
+			  document.execCommand('copy');
+			  document.body.removeChild(el);
+
+
+}
+
+
+$(document).ready(function() {
+   // $('table').each(function(index) {
+        $('.copy').click(function(e) {
+            SelectColumn(e.currentTarget.parentElement.cellIndex, $(this).parents("table").attr("id"));
+        });
+    //});
+});
+	</script>
+
+</body>
+
+</html>
